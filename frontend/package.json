@@ -1,0 +1,88 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.js",
+  "dependencies": {
+    "@craco/craco": "^7.1.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^5.16.11",
+    "@mui/material": "^5.16.11",
+    "@mui/system": "^6.2.1",
+    "@mui/x-data-grid": "^7.17.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.7",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^6.0.3",
+    "electron-build": "^0.0.3",
+    "framer-motion": "^11.5.5",
+    "multer": "^1.4.5-lts.1",
+    "peerjs": "^1.5.4",
+    "process": "^0.11.10",
+    "qrcode": "^1.5.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.4.0",
+    "react-intersection-observer": "^9.14.0",
+    "react-parallax": "^3.5.1",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^10.0.5",
+    "simple-peer": "^9.11.1",
+    "socket.io-client": "^4.7.5",
+    "speakeasy": "^2.0.0",
+    "stream-browserify": "^3.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"npm:start\" \"npm run electron\"",
+    "electron-build": "electron-builder"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "build": {
+    "appId": "Meetings",
+    "win": {
+      "target": "nsis",
+      "icon": "public/favicon.ico"
+    },
+    "files": [
+      "src/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    }
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1",
+    "electron-builder": "^25.0.5",
+    "electron-packager": "^17.1.2",
+    "react-app-rewired": "^2.2.1"
+  }
+}
